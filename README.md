@@ -1,59 +1,55 @@
 # Da-Pizza-s
-Sure, here's a README file for the installation:
 
-```markdown
-# Restaurant Database Installation Guide
+# Restaurant Management System Installation Guide
 
-This guide will help you set up a MySQL database for a restaurant. The database includes tables for login details, restaurant details, IDs, employees, order items, order details, and the menu.
+## Introduction
+This document provides instructions for setting up the Restaurant Management System on your local machine using MySQL and Python.
 
 ## Prerequisites
+- Python installed on your system
+- MySQL installed on your system
+- Basic understanding of Python and MySQL
 
-- MySQL Server
-- Python 3.x
-- `mysql-connector-python` package
+## Installation Steps
+1. **Clone the Repository**: 
+   - Clone the repository from [GitHub Repository Link](#).
+   - Alternatively, you can download and extract the ZIP file.
 
-## Steps
+2. **Install Dependencies**:
+   - Make sure you have `mysql-connector-python` installed.
+   - You can install it using pip:
+     ```
+     pip install mysql-connector-python
+     ```
 
-1. **Import the necessary modules**: Import the `mysql.connector` module in your Python script.
+3. **Database Setup**:
+   - Open MySQL and run the following commands to set up the database:
+     ```sql
+     CREATE DATABASE resturant;
+     USE resturant;
+     CREATE TABLE login_details (
+         Username VARCHAR(20) UNIQUE NOT NULL,
+         Password VARCHAR(20) UNIQUE NOT NULL,
+         Designation VARCHAR(20)
+     );
+     INSERT INTO login_details VALUES ('owner', 'owner@123', 'owner');
+     CREATE TABLE resturant_details (
+         Details VARCHAR(30) NOT NULL,
+         Value VARCHAR(50) NOT NULL
+     );
+     INSERT INTO resturant_details VALUES ('Phone no', '9987 9987');
+     INSERT INTO resturant_details VALUES ('Address', 'Block-J, Saket, Khanpur, New Delhi');
+     INSERT INTO resturant_details VALUES ('email', 'pizza_lovers@gmail.com');
+     INSERT INTO resturant_details VALUES ('website', 'pizzalovers.com');
+     -- Create other required tables and insert initial data as per your requirements.
+     ```
 
-```python
-import mysql.connector
-```
+4. **Run the Application**:
+   - Run the Python script to start the application:
+     ```
+     python your_script_name.py
+     ```
 
-2. **Connect to the MySQL Server**: Replace `'imaditya@123'` with your MySQL password.
+5. **Accessing the Application**:
+   - Once the application is running, you can access it through the provided URL or by typing `localhost` in your browser's address bar.
 
-```python
-pas = 'imaditya@123'  # MySQL password
-mydb = mysql.connector.connect(host='localhost', user='root', passwd=pas)
-```
-
-3. **Create a cursor object**: This object is used to execute SQL commands.
-
-```python
-mycursor = mydb.cursor()
-```
-
-4. **Create the database and tables**: Execute the SQL commands to create the database and tables. Make sure to replace the values in the `INSERT INTO` statements with your own data.
-
-```python
-mycursor.execute("create database resturant3")
-mycursor.execute("use resturant")
-mycursor.execute("create table login_details(Username VARCHAR(20) UNIQUE NOT null, Password Varchar(20) UNIQUE NOT NULL,Designation varchar(20))")
-mycursor.execute("insert into login_details values('owner','owner@123','owner')")
-...
-```
-
-5. **Commit the changes**: This will save all the changes made to the database.
-
-```python
-mydb.commit()
-```
-
-6. **Verify the installation**: Print a message to verify that the installation is completed.
-
-```python
-print("Installation Completed")
-```
-
-That's it! You have successfully set up your restaurant database.
-```
