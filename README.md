@@ -1,12 +1,13 @@
 # Da-Pizza-s
 
-# Restaurant Management System Installation Guide
+# Pizza Restaurant Management System Installation Guide
 
-## Introduction
-This document provides instructions for setting up the Restaurant Management System on your local machine using MySQL and Python.
+## Project Details
+- **Project Name:** Da Pizza's
+- **Creator Name:** Aditya Sharma
 
-## Prerequisites
-- Python installed on your system
+## System Requirements
+- Python 3.x installed on your system
 - MySQL installed on your system
 - Basic understanding of Python and MySQL
 
@@ -33,23 +34,20 @@ This document provides instructions for setting up the Restaurant Management Sys
          Designation VARCHAR(20)
      );
      INSERT INTO login_details VALUES ('owner', 'owner@123', 'owner');
-     CREATE TABLE resturant_details (
-         Details VARCHAR(30) NOT NULL,
-         Value VARCHAR(50) NOT NULL
-     );
-     INSERT INTO resturant_details VALUES ('Phone no', '9987 9987');
-     INSERT INTO resturant_details VALUES ('Address', 'Block-J, Saket, Khanpur, New Delhi');
-     INSERT INTO resturant_details VALUES ('email', 'pizza_lovers@gmail.com');
-     INSERT INTO resturant_details VALUES ('website', 'pizzalovers.com');
-     -- Create other required tables and insert initial data as per your requirements.
+     -- Additional SQL commands as per the provided Python script.
      ```
 
 4. **Run the Application**:
-   - Run the Python script to start the application:
+   - Run the Python script (`pizza_management.py`) to start the application:
      ```
-     python your_script_name.py
+     python pizza_management.py
      ```
 
-5. **Accessing the Application**:
-   - Once the application is running, you can access it through the provided URL or by typing `localhost` in your browser's address bar.
+## Accessing the Application
+- Upon running the script, you'll be prompted with a menu to choose your role: Customer, Owner, or Delivery Boy.
+- Use the following credentials for owner login:
+  - Username: owner
+  - Password: owner@123
 
+## Support
+For any issues or queries regarding the installation process or application functionality, feel free to contact us.
