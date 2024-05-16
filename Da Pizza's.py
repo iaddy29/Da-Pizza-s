@@ -1,6 +1,5 @@
 '''Project Name: Pizza Resturant Management
 Creator Name: Aditya Sharma
-Class: 12-A2
 owner username-owner
       password-owner@123
 '''
@@ -9,7 +8,7 @@ mysql_passwd="imaditya@123"#Mysql password
 
 def main():
     print("*****************************************************************")
-    print("                    WELCOME TO PIZZA LOVERS")
+    print("                    WELCOME TO Da Pizza's                        ")
     print("*****************************************************************")
     print("I'm\n")
     print("1. Customer")
